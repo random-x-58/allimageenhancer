@@ -1,0 +1,66 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Image Enhancer</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: monospace;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #message, #loading {
+      display: none;
+      font-size: 40px;
+    }
+    a {
+      color: cyan;
+      font-size: 20px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to AIImageEnhancer.com</h1>
+  <p><a onclick="startEnhancer()">Click here to start enhancing</a></p>
+
+  <div id="loading">Enhancing image... Please wait.</div>
+  <div id="message">YOU'VE BEEN HACKED!</div>
+
+  <audio id="alertSound">
+    <source src="https://www.soundjay.com/button/sounds/beep-07.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function startEnhancer() {
+      document.querySelector('h1').style.display = 'none';
+      document.querySelector('p').style.display = 'none';
+      document.getElementById('loading').style.display = 'block';
+
+      setTimeout(() => {
+        document.getElementById('loading').style.display = 'none';
+        flashScreen();
+        playSound();
+        showHackedMessage();
+      }, 3000);
+    }function flashScreen() {
+      document.body.style.backgroundColor = 'white';
+      setTimeout(() => {
+        document.body.style.backgroundColor = 'black';
+      }, 100);
+    }
+
+    function playSound() {
+      document.getElementById('alertSound').play();
+    }
+
+    function showHackedMessage() {
+      document.body.innerHTML = "<h1 style='color: red; font-size: 60px; margin-top: 100px;'>YOU'VE BEEN HACKED!</h1>";
+    }
+  </script>
+</body>
+</html>
+``` 
